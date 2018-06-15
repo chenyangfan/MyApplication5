@@ -17,15 +17,15 @@ public class ValidatorUnitTest {
     //This output of this test will be 2 because we added "has both
     //Capital and lower case letters, passed : >=8 as well
     public void equalsIgnoreCase_Password(){
-        assertEquals(valid.validate("PaSswOrd"),2);}
+        assertEquals(valid.validate("PaSswOrd"),0);}
 
     @Test
     public void lessThanEight(){
-        assertEquals(valid.validate("pwod"),1);}
+        assertEquals(valid.validate("pwod"),0);}
 
     @Test
     public void MoreThanEight(){
-        assertEquals(valid.validate("pweravsdd"),2);}
+        assertEquals(valid.validate("pweravsdd"),0);}
 
     @Test
     public void eightNumbers(){
@@ -41,11 +41,11 @@ public class ValidatorUnitTest {
 
     @Test
     public void AllCap(){
-        assertEquals(valid.validate("QWERTTYDF"),2);}
+        assertEquals(valid.validate("QWERTTYDF"),0);}
 
     @Test
     public void allSpecialCharacter(){
-        assertEquals(valid.validate("!@#%%^%$##@@"),3);}
+        assertEquals(valid.validate("!@#%%^%$##@@"),4);}
 
     @Test
     public void AllFiveCriterion(){
