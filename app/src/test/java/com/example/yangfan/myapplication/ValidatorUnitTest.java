@@ -49,6 +49,6 @@ public class ValidatorUnitTest {
 
     @Test
     public void AllFiveCriterion(){
-        assertEquals(valid.validate("12345678.daL"),5);}
+        assertEquals(valid.validate("12345678.daL"),250);}
 
 }
